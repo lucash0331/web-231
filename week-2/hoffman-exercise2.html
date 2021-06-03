@@ -1,0 +1,88 @@
+<!--
+
+Title: index.html
+Author: Lucas Hoffman 
+Date: 05/29/2021
+Description: First assignment for WEB 231
+
+-->
+
+
+<!DOCTYPE html> 
+
+ <html lang="en">
+ 
+<head>
+  
+<title>
+  WEB 231 - Enterprise JavaScript 1
+</title>
+
+<!-- External style sheet for this page -->
+
+  <link rel="stylesheet" type="text/css" href="global.css">
+  
+<!-- Google fonts link for the website -->
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+
+  <div id="container">
+  
+<!-- Card header -->  
+  
+  <h1 class="app-header">Exercise 2.2 - Hello JavaScript</h1>
+
+  <div id="card-example">
+  
+  <div class="card">
+  
+  <div class="card-title"></div>
+  
+  <div class="card-content">
+  
+<!-- content for the button -->  
+  
+  <button id="btnMyCourse" type="button" onclick="myFunction()">What course am I taking</button>
+
+  <p id="txtMyWorld">You are now in Hoffman's world!</p>
+  
+  <a class="return-home" href="index.html">Return</a>
+  
+     </div>
+   </div>
+  </div>
+<script>
+
+<!-- JavaScript code for an alert when you click on a button -->
+
+  function myFunction() { 
+  document.getElementById("txtMyWorld").innerHTML = "WEB 231 - Enterprise JavaScript 1";
+}
+
+  function myFunction() {
+  alert("WEB 231 - Enterprise JavaScript 1");
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
