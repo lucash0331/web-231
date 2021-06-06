@@ -1,0 +1,167 @@
+<!--
+
+Title: payroll.html
+Author: Lucas Hoffman 
+Date: 05/29/2021
+Description: payroll.html code for WEB 231
+
+-->
+
+
+<!DOCTYPE html> 
+
+ <html lang="en">
+ 
+<head>
+  
+<title>
+  WEB 231 - Enterprise JavaScript 1
+</title>
+
+<!-- External style sheets for this page -->
+
+  <link rel="stylesheet" type="text/css" href="site.css">
+  
+  <link rel="stylesheet" type="text/css" href="payroll.css">
+  
+  <link rel="stylesheet" type="text/css" href="global.css">
+
+
+  
+  
+<!-- Google fonts link for the website -->
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 id="payroll-header">Payroll System</h1>
+
+<!-- Employee record 1 title and unordered list  -->
+
+<h3>Employee record 1</h3>
+
+<ul>
+  
+  <li id="txtFirstNameLucas"></li>
+  <li id="txtLastNameHoffman"></li>
+  <li id="txtAddressLucas"></li>
+  <li id="txtHireDateLucas"></li>
+  <li id="txtPayRateLucas"></li>
+  
+</ul>
+
+<!-- Employee record 2 title and unordered list  -->
+
+<h3>Employee record 2</h3>
+
+<ul>
+  
+  <li id="txtFirstNameKobe"></li>
+  <li id="txtLastNameBryant"></li>
+  <li id="txtAddressKobe"></li>
+  <li id="txtHireDateKobe"></li>
+  <li id="txtPayRateKobe"></li>
+  
+</ul>
+
+<!-- Employee record 3 title and unordered list  -->
+
+<h3>Employee record 3</h3>
+
+<ul>
+  
+  <li id="txtFirstNameLebron"></li>
+  <li id="txtLastNameJames"></li>
+  <li id="txtAddressLebron"></li>
+  <li id="txtHireDateLebron"></li>
+  <li id="txtPayRateLebron"></li>
+  
+</ul>
+
+<!-- return link that goes back to index file   -->
+
+<a class="return-home" href="index.html">Return</a>
+
+</div>
+
+</body>
+
+<script>
+
+// variable & output for first name Lucas
+
+const firstName1 = "Lucas";
+document.getElementById("txtFirstNameLucas").innerHTML = "Lucas";
+
+// variable & output for first name Kobe 
+const firstName2 = "Kobe";
+document.getElementById("txtFirstNameKobe").innerHTML = "Kobe";
+
+// variable & output for first name Lebron
+const firstName3 = "Lebron";
+document.getElementById("txtFirstNameLebron").innerHTML = "Lebron";
+
+// variable & output for  last name Hoffman
+const lastName1 = "Hoffman";
+document.getElementById("txtLastNameHoffman").innerHTML = "Hoffman";
+
+// variable & output for  last name Bryant 
+const lastName2 = "Bryant";
+document.getElementById("txtLastNameBryant").innerHTML = "Bryant";
+
+// variable & output for last name James
+const lastName3 = "James";
+document.getElementById("txtLastNameJames").innerHTML = "James";
+
+// variable & output for  address Lucas 
+let address1 = "addressLucas";
+document.getElementById("txtAddressLucas").innerHTML = "123 Molly Lane";
+
+// variable & output for  address Kobe 
+let address2 = "addressKobe";
+document.getElementById("txtAddressKobe").innerHTML = "24 Staples Center";
+
+// variable & output for  address Lebron
+let address3 = "addressLebron";
+document.getElementById("txtAddressLebron").innerHTML = "23 Kings Drive";
+
+// variable & output for  hire date Lucas 
+const hireDate1 = new Date();
+document.getElementById("txtHireDateLucas").innerHTML = "11/24/2020";
+
+// variable & output for  hire date Kobe 
+const hireDate2 = new Date();
+document.getElementById("txtHireDateKobe").innerHTML = "1/11/2011";
+
+// variable & output for  hire date Lebron
+const hireDate3 = new Date();
+document.getElementById("txtHireDateLebron").innerHTML = "4/20/1993";
+
+// variable & output for pay rate Lucas 
+let num = 3.45;
+let payRate1 = num.toFixed(1);
+document.getElementById("txtPayRateLucas").innerHTML = payRate1;
+
+// variable & output for  pay rate Kobe 
+let num1 = 3.43;
+let payRate2 = num.toFixed(1);
+document.getElementById("txtPayRateKobe").innerHTML = payRate2;
+
+// variable & output for pay rate Lebron
+let num2 = 5.43;
+let payRate3 = num.toFixed(1);
+document.getElementById("txtPayRateLebron").innerHTML = payRate3;
+
+
+
+
+</script>
+</body>
+</html>

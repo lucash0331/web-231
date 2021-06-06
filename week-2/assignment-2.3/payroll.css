@@ -1,0 +1,18 @@
+/*
+Title: payroll.css
+Author: Lucas Hoffman 
+Date: 05/29/2021
+Description: payroll.css code for WEB 231
+*/
+
+/* Styling for the unordered list */
+
+ul {
+	border: dotted 1px red;
+}
+
+/* Styling for the payroll header */
+
+#payroll-header {
+	text-align: center;
+}
