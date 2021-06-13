@@ -1,0 +1,25 @@
+/*
+Title: temp-conversion.css
+Author: Lucas Hoffman 
+Date: 05/29/2021
+Description: temp-conversion css file
+*/
+
+/* styling for the body */
+
+body {
+	text-align: center;
+	font-size: 28px;
+}
+
+/* styling for the app header */
+
+.app-header {
+	text-align: center;
+}
+
+/* styling for return link */
+
+.return-home {
+	float: left;
+}

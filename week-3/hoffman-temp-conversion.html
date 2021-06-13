@@ -1,0 +1,124 @@
+<!--
+
+Title: temp-conversion.html
+Author: Lucas Hoffman 
+Date: 06/09/2021
+Description: html file for temp-conversion assignment
+
+-->
+
+
+<!DOCTYPE html> 
+
+<html lang="en">
+ 
+<head>
+  
+ <!-- Title for the page --> 
+<title>
+  WEB 231 - Enterprise JavaScript 1
+</title>
+
+<!-- External style sheet's for this page -->
+
+  <link rel="stylesheet" type="text/css" href="global.css">
+  
+  <link rel="stylesheet" type="text/css" href="hoffman-temp-conversion.css">
+   
+  <link rel="stylesheet" type="text/css" href="site.css">
+  
+<!-- Google fonts link for the website -->
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+
+<!-- Container for first form -->
+
+<div id="container">
+
+<!-- App header -->
+
+  <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
+  
+<!-- form example -->
+
+  <div id="form-example">
+  
+<!-- card div -->
+
+  <div class="card">
+
+<!-- card title -->
+
+  <div class="card-title">Farenheit to Celsius Converter</div>
+
+<!-- Form, label & button section for first card -->
+
+<form>
+
+  <label for="form-field">Fahrenheit value</label>
+  
+  
+  <input name="txtFahrenheit" type="number" id="txtFahrenheit"></input>
+  
+  <br>
+  
+  
+  
+  <button onclick="convertToCe();" id="convert-temp" type="button" class="btn btn-primary">Convert Temperature</button>
+  
+  
+</form>
+</card>
+</div>
+</div>
+
+<!-- Div fof the second card -->
+
+<div class="card">
+
+  <div class="card-title">Conversion Results</div>
+  
+  <p id="demo">
+  
+  <input type="text" id="celcius1" class="form-control" readonly="readonly"></input>
+  
+  </p>
+
+</div>
+
+<!-- Return link -->
+
+<a class="return-home" href="index.html">Return</a>
+
+
+</body>
+
+<!-- JavaScript content for the website -->
+
+<script>
+
+function convertToCe() {
+
+  var fahrenheitl = document.getElementById("txtFahrenheit").value);
+  
+  if(txtFahrenheit != ""){
+  
+    var number = parseFloat(txtFahrenheit);
+    
+    document.getElementById("celcius1").value = (number - 32)/1.8;
+    
+    }else{
+      alert("Please enter something");
+      }
+      }
+  
+  
+</script>
+</html>
