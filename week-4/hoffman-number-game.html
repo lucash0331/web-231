@@ -1,0 +1,132 @@
+<!--
+
+Title: temp-conversion.html
+Author: Lucas Hoffman 
+Date: 06/18/2021
+Description: html file for number-game assignment
+
+-->
+
+
+<!DOCTYPE html> 
+
+<html lang="en">
+ 
+<head>
+  
+ <!-- Title for the page --> 
+<title>
+  WEB 231 - Enterprise JavaScript 1
+</title>
+
+<!-- External style sheet's for this page -->
+
+  <link rel="stylesheet" type="text/css" href="global.css">
+  
+  <link rel="stylesheet" type="text/css" href="hoffman-number-game.css">
+   
+  <link rel="stylesheet" type="text/css" href="site.css">
+  
+<!-- Google fonts link for the website -->
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+
+<!-- Container for first form -->
+
+<div id="container">
+
+<!-- App header -->
+
+  <h1 class="app-header">Welcome to the numbers game!</h1>
+  
+<!-- form example -->
+
+  <div id="form-example">
+  
+<!-- card div -->
+
+  <div class="card">
+
+<!-- card title -->
+
+  <div class="card-title">Pick a number between 1 and 10</div>
+
+<!-- Form, label & button section for first card -->
+
+<form>
+
+  <label for="form-field">Guess the number.</label>
+  
+  
+  <input class="txtMyNumber" type="text" id="txtMyNumber"></input>
+  
+  <br>
+  
+  
+  <button onclick="myFunction()" id="btnSubmit" type="button" class="btn btn-primary">Submit</button>
+  
+  
+  
+</form>
+</card>
+</div>
+</div>
+
+<!-- Div fof the second card -->
+
+<div class="card">
+
+  <div class="card-title">Results</div>
+  
+</div>
+
+<!-- Return link -->
+
+<a class="return-home" href="index.html">Return</a>
+
+
+</body>
+
+<!-- JavaScript content for the website -->
+
+<script>
+
+    // random value generated
+    var y = Math.floor(Math.random() * 10 + 1);
+      
+    // counting the number of guesses
+    // made for correct Guess
+    var guess = 1;
+      
+    document.getElementById("btnSubmit").onclick = function(){
+      
+   // number guessed by user     
+   var x = document.getElementById("txtMyNumber").value;
+  
+   if(x == y)
+   {    
+       alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
+               + guess + " GUESS ");
+   }
+   else if(x > y) /* if guessed number is greater
+                   than actual number*/ 
+   {    
+       guess++;
+       alert("OOPS SORRY!! TRY A SMALLER NUMBER");
+   }
+   else
+   {
+       guess++;
+       alert("OOPS SORRY!! TRY A GREATER NUMBER")
+   }
+}
+
+</script>
+</html>
