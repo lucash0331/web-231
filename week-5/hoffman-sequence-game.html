@@ -1,0 +1,152 @@
+<!--
+
+Title: index.html
+Author: Lucas Hoffman 
+Date: 05/29/2021
+Description: First assignment for WEB 231
+
+-->
+
+<!DOCTYPE html> 
+
+<html lang="en">
+ 
+<head>
+  
+ <!-- Title for the page --> 
+<title>
+  WEB 231 - Enterprise JavaScript 1
+</title>
+
+<!-- External style sheet's for this page -->
+
+  <link rel="stylesheet" type="text/css" href="global.css">
+  
+  <link rel="stylesheet" type="text/css" href="hoffman-sequence-game.css">
+   
+  <link rel="stylesheet" type="text/css" href="site.css">
+  
+<!-- Google fonts link for the website -->
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+
+<!-- Container for first form -->
+
+<div id="container">
+
+<!-- App header -->
+
+  <h1 class="app-header">Welcome to the sequence game!</h1>
+  
+<!-- form example -->
+
+  <div id="form-example">
+  
+<!-- card div -->
+
+  <div class="card">
+
+<!-- card title -->
+
+  <div class="card-title">Sequence Selection Form</div>
+
+<!-- Form, label & button section for first card -->
+
+<form>
+
+  <label for="form-field">Choose a number sqquence</label>
+  
+  
+  
+  
+  <select class="drop-down-menu" type= "text" id= "sequence">
+  
+    <option value= "submit" text="--Select--">--Select--</option>
+    <option value= "fibonacci" text= "Fibonacci Sequence">Fibonacci Sequence</option>
+    <option value= "even" text= "Even Numbers">Even Numbers</option>
+    <option value = "odd" text= "Odd Numbers">Odd Numbers</option>
+ 
+ </select>
+  
+  <br>
+  <br>
+  
+  <button onclick="myFunction()" id="btnDisplaySequence" type="button" class="btn btn-primary">Display sequence</button>
+  
+  <br>
+  <br>
+ 
+  
+</form>
+</card>
+</div>
+</div>
+
+<!-- Div fof the second card -->
+
+<div class="card">
+
+  <div class="card-title">Sequence Results</div>
+  
+  <br> <br>
+  
+  <p id="demo"></p>
+  
+
+</div>
+
+<!-- Return link -->
+
+<a class="return-home" href="index.html">Return</a>
+
+
+</body>
+
+<!-- JavaScript content for the website -->
+
+<script>
+
+document.GetElementById("sequence").value = "choice";
+
+const choice = "C";
+
+// if...else statements
+if (choice === "A") {
+  console.log("A");
+} else if (choice === "B") {
+  console.log("B");
+} else if (choice === "C") {
+  console.log("Winner winner, chicken dinner!");
+} else if (choice === "D") {
+  console.log("D");
+} else {
+  console.log("Invalid choice");
+}
+
+// switch statement
+switch (choice) {
+  case 'A':
+    console.log('A')
+    break
+  case 'B':
+    console.log('B')
+    break
+  case 'C':
+    console.log('Winner winner, chicken dinner!')
+    break
+  case 'D':
+    console.log('D')
+    break
+  default:
+    console.log('Invalid Choice')
+    break
+}
+
+
