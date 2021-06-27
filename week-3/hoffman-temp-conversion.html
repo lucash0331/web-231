@@ -65,13 +65,15 @@ Description: html file for temp-conversion assignment
   <label for="form-field">Fahrenheit value</label>
   
   
-  <input name="txtFahrenheit" type="number" id="txtFahrenheit"></input>
+  <input name="txtFahrenheit" type="number" id="txtFahrenheit" 
+    oninput= "temperatureConverter(this.value)" onchange= "temperatureConverter(this.value)">
+  </input>
   
   <br>
   
   
   
-  <button onclick="convertToCe();" id="convert-temp" type="button" class="btn btn-primary">Convert Temperature</button>
+  <button onclick="temperatureConverter();" id="convert-temp" type="button" class="btn btn-primary">Convert Temperature</button>
   
   
 </form>
@@ -85,9 +87,11 @@ Description: html file for temp-conversion assignment
 
   <div class="card-title">Conversion Results</div>
   
-  <p id="demo">
+  <p id="outputCelcius">
   
-  <input type="text" id="celcius1" class="form-control" readonly="readonly"></input>
+  <input type="number" id="celcius1" class="form-control" readonly="readonly"
+  placeholder= "">
+  </input>
   
   </p>
 
@@ -104,21 +108,11 @@ Description: html file for temp-conversion assignment
 
 <script>
 
-function convertToCe() {
-
-  var fahrenheitl = document.getElementById("txtFahrenheit").value);
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum).toFixed(2);
   
-  if(txtFahrenheit != ""){
-  
-    var number = parseFloat(txtFahrenheit);
-    
-    document.getElementById("celcius1").value = (number - 32)/1.8;
-    
-    }else{
-      alert("Please enter something");
-      }
-      }
-  
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+  }
   
 </script>
 </html>
