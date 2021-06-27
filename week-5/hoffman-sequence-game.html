@@ -35,118 +35,116 @@ Description: First assignment for WEB 231
  
 </head>
 
-<body>
+<!-- body section -->
+  <body>
 
-<!-- Container for first form -->
 
-<div id="container">
+    <div id="container">
+    
+        <h1 class="title">Welcome to the Sequence Game!</h1>
+        
+        <div class="card">
+        
+            <p class="card-title">Sequence Selection Form</p>
+            
+            <div class="card-body">
+            
+                <form>
+                
+                    <label for="sequence" class="card-text">Guess the Number:</label>
+                    
+                    <select name="sequence" id="sequence" class="drop-down-menu"autocomplete="off">
+                    
+                        <option value="select">--Select--</option>
+                        
+                        <option value="fibonacci">Fibonacci Sequence</option>
+                        
+                        <option value="even">Even Numbers</option>
+                        
+                        <option value="odd">Odd Numbers</option>
+                        
+                      </select>
+                      
+                    <br>
+                    
+                    <button type="button" id="btnDisplaySequence">Display Sequence</button>
+                    
+                </form>
+                
+            </div>
+            
+        </div>
+        
+        <div class="card">
+        
+            <p class="card-title">Sequence Results</p>
+            
+            <p id="displaySequence"></p>
+            
+  </div>
 
-<!-- App header -->
 
-  <h1 class="app-header">Welcome to the sequence game!</h1>
-  
-<!-- form example -->
-
-  <div id="form-example">
-  
-<!-- card div -->
-
-  <div class="card">
-
-<!-- card title -->
-
-  <div class="card-title">Sequence Selection Form</div>
-
-<!-- Form, label & button section for first card -->
-
-<form>
-
-  <label for="form-field">Choose a number sqquence</label>
-  
-  
-  
-  
-  <select class="drop-down-menu" type= "text" id= "sequence">
-  
-    <option value= "submit" text="--Select--">--Select--</option>
-    <option value= "fibonacci" text= "Fibonacci Sequence">Fibonacci Sequence</option>
-    <option value= "even" text= "Even Numbers">Even Numbers</option>
-    <option value = "odd" text= "Odd Numbers">Odd Numbers</option>
- 
- </select>
-  
-  <br>
-  <br>
-  
-  <button onclick="myFunction()" id="btnDisplaySequence" type="button" class="btn btn-primary">Display sequence</button>
-  
-  <br>
-  <br>
- 
-  
-</form>
-</card>
-</div>
-</div>
-
-<!-- Div fof the second card -->
-
-<div class="card">
-
-  <div class="card-title">Sequence Results</div>
-  
-  <br> <br>
-  
-  <p id="demo"></p>
-  
-
-</div>
 
 <!-- Return link -->
 
 <a class="return-home" href="index.html">Return</a>
 
-
+</div>
 </body>
-
+</html>
 <!-- JavaScript content for the website -->
 
 <script>
 
-document.GetElementById("sequence").value = "choice";
+  let num1 = 0, num2 = 1, next, fibonacciSequenceText="";
+ 
+     function displaySequence() {
+        
+        let sequence = document.getElementById('sequence').value; //gets input value
+        let choice = document.getElementById('displaySequence');
+    
+    
+        if (sequence == "fibonacci") {
+            while (num1 <= 40) {
+                fibonacciSequenceText += num1 + ", ";
+                next = num1 + num2;
+                num1 = num2;
+                num2 = next;
+    
+            }
+            choice.innerHTML = fibonacciSequenceText.slice(0, -2);
+        } 
+        
+        else if(sequence == "even"){
+            let evens = "";
+            let num=0;
+            do {
+                if (num % 2 == 0){
+                    evens += num + ", ";
+                    num++
+                    choice.innerHTML = evens;
+                    
+                } else(num++)
+            } while (num < 20);
+        }
+        else if (sequence == "odd"){
+            let odds = "";
+            for (let i = 0; i<20; i++){
+                if (i % 2 !== 0) {
+                    odds += i + ", ";
+                    choice.innerHTML = odds;
+                }
+            }
+        }
+        else if(sequence == "select"){
+           alert("Invalid selection, please try again!");
+        }
+         
+    }
 
-const choice = "C";
-
-// if...else statements
-if (choice === "A") {
-  console.log("A");
-} else if (choice === "B") {
-  console.log("B");
-} else if (choice === "C") {
-  console.log("Winner winner, chicken dinner!");
-} else if (choice === "D") {
-  console.log("D");
-} else {
-  console.log("Invalid choice");
-}
-
-// switch statement
-switch (choice) {
-  case 'A':
-    console.log('A')
-    break
-  case 'B':
-    console.log('B')
-    break
-  case 'C':
-    console.log('Winner winner, chicken dinner!')
-    break
-  case 'D':
-    console.log('D')
-    break
-  default:
-    console.log('Invalid Choice')
-    break
-}
-
-
+    document.getElementById('btnDisplaySequence').addEventListener('click', (e) => {
+        e.preventDefault();
+        displaySequence();
+    }
+    );
+    </script>

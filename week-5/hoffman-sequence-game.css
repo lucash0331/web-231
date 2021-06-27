@@ -4,3 +4,105 @@ Author: Lucas Hoffman
 Date: 06/24/2021
 Description: sequence-game css file
 */
+
+
+/* Styling for the container */
+
+#container{
+    margin: auto;
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Styling for  the title */
+
+.title{
+    font-size: 35px;
+    font-weight: 500;
+}
+
+/* Styling for  the card */
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 25px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba( 0, 0, 0, 0.25);
+    
+}
+
+/* Styling for the card's title */
+
+.card-title{
+    margin: auto;
+    text-align: center;
+    color: #453674;
+    
+}
+
+/* Styling for the card's body */
+
+.card-body{
+    width:66%
+}
+
+/* Styling for the card's text */
+
+.card-text{
+    font-size: 16px;
+}
+
+/* Styling for sequence ID */
+
+#sequence{
+    padding: 7.5px;
+    border: 2px solid rgba( 0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+/* Styling for  the button */
+
+#btnDisplaySequence{
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #453674;
+    color: white;
+}
+
+/* Styling for where the sequence is displayed */
+
+.displaySequence {
+    text-align: center;
+    margin: auto;
+}
+
+/* Styling for  return home link */
+
+.return-home{
+    display: block;
+    color: #4F3674;
+    text-decoration: none;
+    font-size: 18px;
+	
+}
+
+/* Styling for when someone hover's over the link */
+
+.return-home:hover{
+    background-color: #D6A800;
+}
+
+/* Styling for when someone clicks on the link */
+
+.return-home:visited{
+    color: #3C275A;
+}

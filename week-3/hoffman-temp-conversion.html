@@ -37,65 +37,24 @@ Description: html file for temp-conversion assignment
 </head>
 
 <body>
+    <div id="container">
+        <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
+        <div class="card">
+            <p class="card-title">Fahrenheit to Celsius Converter</p>
+            <form>
+                <label for="txtFahrenheit" id="txtFahrenheitLabel">Fahrenheit value:</label>
+                <input type="text" name="txtFahrenheit" id="txtFahrenheit">
+                <br>
+                <button type="button" id="buttonFahrenheit">Convert Temperature</button>
+            </form>
+        </div>
+        <div class="card">
+            <p class="card-title">Conversion Results</p>
+            <div id="card-content"></div>
+        </div>
+       
+    </div>
 
-<!-- Container for first form -->
-
-<div id="container">
-
-<!-- App header -->
-
-  <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
-  
-<!-- form example -->
-
-  <div id="form-example">
-  
-<!-- card div -->
-
-  <div class="card">
-
-<!-- card title -->
-
-  <div class="card-title">Farenheit to Celsius Converter</div>
-
-<!-- Form, label & button section for first card -->
-
-<form>
-
-  <label for="form-field">Fahrenheit value</label>
-  
-  
-  <input name="txtFahrenheit" type="number" id="txtFahrenheit" 
-    oninput= "temperatureConverter(this.value)" onchange= "temperatureConverter(this.value)">
-  </input>
-  
-  <br>
-  
-  
-  
-  <button onclick="temperatureConverter();" id="convert-temp" type="button" class="btn btn-primary">Convert Temperature</button>
-  
-  
-</form>
-</card>
-</div>
-</div>
-
-<!-- Div fof the second card -->
-
-<div class="card">
-
-  <div class="card-title">Conversion Results</div>
-  
-  <p id="outputCelcius">
-  
-  <input type="number" id="celcius1" class="form-control" readonly="readonly"
-  placeholder= "">
-  </input>
-  
-  </p>
-
-</div>
 
 <!-- Return link -->
 
@@ -103,16 +62,18 @@ Description: html file for temp-conversion assignment
 
 
 </body>
-
+</html>
 <!-- JavaScript content for the website -->
 
 <script>
 
-function temperatureConverter(valNum) {
-  valNum = parseFloat(valNum).toFixed(2);
-  
-  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
-  }
-  
+   function convertFahrenheit (){
+        let fahrenheit = document.getElementById('txtFahrenheit').value; //get input value
+
+        document.getElementById('card-content').innerHTML = ((parseFloat(fahrenheit) - 32) / 1.8).toFixed(2); //displays converted value
+        
+        document.getElementById('txtFahrenheit').value = ""; //clears input after button click
+    }
+
+   document.getElementById('buttonFahrenheit').onclick = convertFahrenheit;
 </script>
-</html>
