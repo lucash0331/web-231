@@ -1,0 +1,107 @@
+/*
+============================================
+; Title:  hoffman-in-n-out-books.css
+; Author: Lucas Hoffman
+; Date:   July 4th, 2021
+; Description: Week 6 content
+;=========================================== 
+*/
+
+/* Styling for the container */
+#container{
+    margin: auto;
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* Styling for the title */
+.title{
+    font-size: 35px;
+    font-weight: 500;
+}
+/* Styling for the card */
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 25px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba( 0, 0, 0, 0.25);
+    
+}
+/* Styling for the card title  */
+.card-title{
+    margin: auto;
+    text-align: center;
+    color: #453674;
+    
+}
+/* Styling for the card body  */
+.card-body{
+    width:66%
+}
+/* Styling for the card's text */
+.card-text{
+    font-size: 16px;
+}
+/* Styling for the card's table  */
+.card-table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 400;
+}
+/* Styling for the card's table header  */
+.card-table-header{
+    margin: 12px auto;
+    padding: 5px;
+    text-align: left;
+    color: white;
+    background-color: #4F3674;
+    border: 1px solid #ddd
+}
+/* Styling for the card's table data */
+.card-table-data{
+    padding: 5px;
+    border: 1px solid #ddd
+}
+/* Styling for when the mouse hover's over a row */
+.card-table-row:hover{
+    color: #4F3674;
+    background-color: #D6A800;
+    cursor: pointer;
+}
+/* Styling for when you click on the button */
+#btnDisplayListing{
+    width: 265px;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #453674;
+    color: white;
+    border-radius: 5px;
+}
+/* Styling for the drop down menu */
+.drop-down-menu{
+    padding: 10px;
+}
+/* Styling for the return link */
+.return-home{
+    display: block;
+    color: #4F3674;
+    text-decoration: none;
+    font-size: 18px;
+}
+/* Styling for the return link when you hover a mouse over it */
+.return-home:hover{
+    background-color: #D6A800;
+}
+/* Styling for the return link after you visit the link */
+.return-home:visited{
+    color: #3C275A;
+}
