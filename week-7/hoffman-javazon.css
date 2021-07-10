@@ -62,3 +62,22 @@ table tr:hover {
   color: #4f3674;
   cursor: pointer;
 }
+
+.return-home {
+	color: 4f3674;
+	text-decoration: none;
+}
+
+/* styling for when the mouse hovers over return link */
+
+a:hover {
+    background-color: d6a800;
+    color: 4f3674;
+}
+
+/* styling for return link pseudo visited text color */
+
+a:visited {
+    color: 3c275a;
+}
+   
