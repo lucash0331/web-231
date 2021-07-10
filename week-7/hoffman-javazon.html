@@ -1,0 +1,201 @@
+<!--
+Title: Assignment 7.2   
+Author: Lucas Hoffman
+Date: July 9, 2021
+Description: Week 7 content
+Link to GitHub Landing page: https://lucash0331.github.io/web-231/
+Link to GitHub repository: https://github.com/lucash0331/web-231
+-->
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8"> 
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          
+          <!-- Google fonts link and css link for this website -->
+        <link rel="stylesheet" href="../global.css" type="text/css" media="all">
+        <link rel="stylesheet" href="hoffman-javazon.css" type="text/css" media="all">
+        <link rel="stylesheet" href="../index.html" type="text/css" media="all">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+        
+        <!-- Title for the website -->
+        <title>WEB 231 - Enterprise JavaScript I</title>
+    </head>
+        <!-- card content for the website -->
+    <body onload="onLoad()">
+        <div id="container">
+            <h1 class="app-header">Welcome to the Javazon App!</h1>
+            <div class="card card-content">
+            
+            
+                <div class="card-title">Javazon Selection Form</div>
+                <div id="form">
+                    <label>Choose a listing</label>
+                    
+       <!-- Card drop down menu and content -->             
+                    <select id="listing" class="drop-down-menu">
+                        <option value="select">Select</option>
+                        <option value="products">Products</option>
+                        <option value="services">Services</option>
+                        <option value="employees">Employees</option>
+                    </select>
+                </div>
+                
+      <!-- Code for the display listing button -->          
+                <button onclick="myFunction()" id="btnDisplayListing" class="btn btn-primary">Display Listing</button>
+            </div>
+            <br>
+            
+      <!-- Return link that goes to my GitHub's Landing page -->      
+            <a class="return-home" href="../index.html">Return</a>
+            <br>
+            
+      <!-- Card content for the second card when Javazon Products is selected  -->      
+            <div class="card card-content" id="products-card">
+                <div class="card-title">Javazon Products</div>
+                <table id="products-table">
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total Value</th>
+                    </tr>
+                </table>
+            </div>
+            
+     <!-- Card content for the second card when Javazon Services is selected  -->        
+            <div class="card card-content" id="services-card">
+                <div class="card-title">Javazon Services</div>
+                <table id="services-table">
+                    <tr>
+                        <th>Service ID</th>
+                        <th>Description</th>
+                        <th>Hourly Rate</th>
+                        <th>Minimum Billable hours</th>
+                    </tr>
+                </table>
+            </div>
+            
+    <!-- Card content for the second card when Javazon Employees is selected  -->         
+            <div class="card card-content" id="employees-card">
+                <div class="card-title">Javazon Employees</div>
+                <table id="employees-table">
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Last Name</th>
+                        <th>First Name</th>
+                        <th>Salary</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        let products;
+        let services;
+        let employees;
+
+        // Retrieves all HTML tables onLoad and displays to none
+        function onLoad() {
+            products = document.getElementById("products-card");
+            services = document.getElementById("services-card");
+            employees = document.getElementById("employees-card");
+            products.style.display = "none";
+            services.style.display = "none";
+            employees.style.display = "none";
+        }
+
+        // Class parameters and properties for Product, Services, and Employee's
+        class Product {
+            constructor (id, description, price, quantity) {
+                this.id = id;
+                this.description = description;
+                this.price = price;
+                this.quantity = quantity;
+                this.totalValue = (quantity*price).toFixed(2);
+            }
+        }
+
+        // Class paramaters and properties for employee id, description, hourly rate & min salary 
+        class Services {
+            constructor (id, description, hourlyRate, min){
+                this.id = id;
+                this.description = description;
+                this.hourlyRate = hourlyRate;
+                this.min = min;
+            }
+        }
+
+        // Class parameters and properties for employee id, first name, last name & salary  
+        class Employee {
+            constructor (id, firstName, lastName, salary) {
+                this.id = id;
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.salary = salary.toFixed(2);
+            }
+        }
+
+        // Objects for Product, Services, and Employees
+        const product1 = new Product(9781118008188, "HTML and CSS: Design and Build Websites", 22.26, 10);
+        const product2 = new Product(9781491952023, "JavaScript: The Definitive Guide 7/E", 41.33, 7);
+        const product3 = new Product(9781449331818, "Learning JavaScript Design Patterns 1/E", 25.99, 3);
+        const product4 = new Product(978161729422, "Express in Action: Writing, building, and, testing Node.js applications 1/E", 34.91, 3);
+        const product5 = new Product(9781491954461, "MongoDB The Definitive Guide", 33.70, 8);
+
+        const services1 = new Services(100, "Website Design", 150, 25);
+        const services2 = new Services(101, "DevOps Consulting", 125, 50);
+        const services3 = new Services(102, "Database Design", 125, 15);
+
+        const employee1 = new Employee(1007, "Beethoven", "Ludwig", 13.99);
+        const employee2 = new Employee(1008, "Bach", "Johann", 22.30);
+        const employee3 = new Employee(1009, "Mozart", "Wolfgang", 19.50);
+        const employee4 = new Employee(1010, "Brahms", "Johannes", 12);
+        const employee5 = new Employee(1011, "Haydn", "Joseph", 32.50);
+
+        // Retrieves user selection and displays the corresponding HTML table.
+        function myFunction() {
+            let choice = document.getElementById("listing").value;
+            switch (choice) {
+                case "products":
+                    products.style.display = "block";
+                    services.style.display = "none";
+                    employees.style.display = "none";
+                    break;
+                case "services":
+                    services.style.display = "block";
+                    products.style.display = "none";
+                    employees.style.display = "none";
+                    break;
+                case "employees":
+                    employees.style.display = "block";
+                    products.style.display = "none";
+                    services.style.display = "none";
+                }
+        }
+
+        // HTML tables for Product, Services, and Employees
+        document.getElementById("products-table").innerHTML += 
+            "<tr><td>"+product1.id+"</td>" + "<td>"+product1.description+"</td>" + "<td>"+product1.price+"</td>" + "<td>"+product1.quantity+"</td>" + "<td>"+product1.totalValue+"</td></tr>" +
+            "<tr><td>"+product2.id+"</td>" + "<td>"+product2.description+"</td>" + "<td>"+product2.price+"</td>" + "<td>"+product2.quantity+"</td>" + "<td>"+product2.totalValue+"</td></tr>" +
+            "<tr><td>"+product3.id+"</td>" + "<td>"+product3.description+"</td>" + "<td>"+product3.price+"</td>" + "<td>"+product3.quantity+"</td>" + "<td>"+product3.totalValue+"</td></tr>" +
+            "<tr><td>"+product4.id+"</td>" + "<td>"+product4.description+"</td>" + "<td>"+product4.price+"</td>" + "<td>"+product4.quantity+"</td>" + "<td>"+product4.totalValue+"</td></tr>" +
+            "<tr><td>"+product5.id+"</td>" + "<td>"+product5.description+"</td>" + "<td>"+product5.price+"</td>" + "<td>"+product5.quantity+"</td>" + "<td>"+product5.totalValue+"</td></tr>";
+
+        document.getElementById("services-table").innerHTML +=
+            "<tr><td>"+services1.id+"</td>" + "<td>"+services1.description+"</td>" + "<td>"+services1.hourlyRate+"</td>" + "<td>"+services1.min+"</td></tr>" +
+            "<tr><td>"+services2.id+"</td>" + "<td>"+services2.description+"</td>" + "<td>"+services2.hourlyRate+"</td>" + "<td>"+services2.min+"</td></tr>" +
+            "<tr><td>"+services3.id+"</td>" + "<td>"+services3.description+"</td>" + "<td>"+services3.hourlyRate+"</td>" + "<td>"+services3.min+"</td></tr>";
+
+        document.getElementById("employees-table").innerHTML +=
+            "<tr><td>"+employee1.id+"</td>" + "<td>"+employee1.firstName+"</td>" + "<td>"+employee1.lastName+"</td>" + "<td>"+employee1.salary+"</td></tr>" +
+            "<tr><td>"+employee2.id+"</td>" + "<td>"+employee2.firstName+"</td>" + "<td>"+employee2.lastName+"</td>" + "<td>"+employee2.salary+"</td></tr>" +
+            "<tr><td>"+employee3.id+"</td>" + "<td>"+employee3.firstName+"</td>" + "<td>"+employee3.lastName+"</td>" + "<td>"+employee3.salary+"</td></tr>" +
+            "<tr><td>"+employee4.id+"</td>" + "<td>"+employee4.firstName+"</td>" + "<td>"+employee4.lastName+"</td>" + "<td>"+employee4.salary+"</td></tr>" +
+            "<tr><td>"+employee5.id+"</td>" + "<td>"+employee5.firstName+"</td>" + "<td>"+employee5.lastName+"</td>" + "<td>"+employee5.salary+"</td></tr>";   
+    </script>
+</html> 

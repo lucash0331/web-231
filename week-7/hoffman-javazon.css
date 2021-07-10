@@ -1,0 +1,64 @@
+/*
+============================================
+; Title:  hoffman-javazon.css
+; Author: Lucas Hoffman
+; Date:   July 9th, 2021
+; Description: Week 7 content
+;=========================================== 
+*/
+
+/** Styling for the body sectiom */
+
+html {
+	font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+
+/** Styling for the card sectiom */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+/** Styling for the card's title sectiom */
+.card-title {
+  text-align: center;
+  font-size: 2em;
+  color: #4f3674;
+  font-weight: 400;
+}
+
+/** Styling for the app's header sectiom */
+.app-header {
+  text-align: center;
+}
+
+/** Styling for the table  sectiom */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/** Styling for the table row's and header's sectioms */
+table tr th {
+  padding: 12px;
+  text-align: left;
+  background-color: #4f3674;
+  color: white;
+  border: 1px solid #ddd;
+}
+
+/** Styling for the table's data */
+table td {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  border: 1px solid #ddd;
+}
+
+/** Styling for when the mouse hovers over a table row */
+table tr:hover {
+  background-color: #d6a800;
+  color: #4f3674;
+  cursor: pointer;
+}

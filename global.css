@@ -1,3 +1,26 @@
+/*
+============================================
+; Title:  global.css
+; Author: Lucas Hoffman
+; Date:   July 4th, 2021
+; Description: css for all web-231 projects
+;=========================================== 
+*/
+
+/* Styling for the body sectiom */
+
+html {
+	font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+
+/* Styling for the container */
+
+#container {
+	margin-top: 50px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
 /*styling for the card */
 
 .card {
@@ -18,7 +41,7 @@
 /* Styling for the card content */
 
 .card-content {
-    padding: 2px 16px;
+    padding: 4px 16px;
 }
 
 /* Styling for when the mouse hovers over card */
@@ -117,3 +140,12 @@ a:visited {
     color: 3c275a;
 }
     
+/* Styling for the drop down menu */
+
+.drop-down-menu {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
