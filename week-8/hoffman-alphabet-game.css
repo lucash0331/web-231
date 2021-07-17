@@ -1,0 +1,139 @@
+/*
+Title: Assignment 8.2
+Author: Lucas Hoffman
+Date: July 12, 2021
+Description: Week 8 Alphabet Game css file
+Link to GitHub Landing page: https://lucash0331.github.io/web-231/
+Link to GitHub repository: https://github.com/lucash0331/web-231
+*/
+
+/* Styling for the card's */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+/* Styling for the card's title */
+.card-title {
+  text-align: center;
+  font-size: 2em;
+  color: #4f3674;
+  font-weight: 400;
+}
+
+/* Styling for the card's content */
+#card-content {
+  padding: 2px 16px;
+  text-align: center;
+  font-size: 28px;
+}
+
+/* Styling for the card's content results */
+#card-content-results {
+  padding: 2px 16px;
+  text-align: center;
+  font-size: 28px;
+}
+
+/* Styling for the button */
+.btn {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 15px 32px;
+  background-color: #4f3674;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+/* Styling for the when the mouse hover's over the button */
+.btn:hover {
+  background-color: #d6a800;
+  color: #4f3674;
+}
+
+/* Styling for the body's font */
+html {
+  font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+
+/* Styling for the h1, h2, h3, & h4 elements */
+h2, h3, h4 {
+  background-color: #3c275a;
+  color: #ffffff;
+  border: 1px solid #d6a800;
+  padding: 10px;
+}
+
+/* Styling for the return link */
+a {
+  color: #453674;
+  text-decoration: none;
+}
+
+/* Styling for the return link when the mouse hovers over it */
+a:hover {
+  background-color: #d6a800;
+  color: #4f3674;
+}
+
+/* Styling for the return link when someone visits it */
+a:visited {
+  color: #3c275a;
+}
+
+/* Styling for the container div */
+.container {
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  max-width: 50%;
+}
+
+/* Styling for the unordered list's border */
+.ul-border {
+  border-style: dotted;
+  border-width: 1px;
+  border-color: red;
+}
+
+/* Styling for the table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* Styling for the table header */
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4f3674;
+  color: #ffffff;
+  border: 1px solid #ddd;
+}
+
+/* Styling for the table data */
+td {
+  border: 1px solid #ddd;
+}
+
+/* Styling for when a mouse hover's over a row in the table */
+tr:hover {
+  background-color: #d6a800;
+  color: #453674;
+  cursor: pointer;
+}
+
+/* Styling for the App header */
+.app-header {
+    text-align: center;
+}
+h1 {
+    text-aligh: center;
+}
